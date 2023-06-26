@@ -52,17 +52,39 @@ body {
     background-color: #fac4ff;
     color: #000;
   }
+  &.dark {
+    background-color: #1b1b1b;
+    .display-screen > div {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+    button#clear {
+      background-color: #7f7fd5;
+      color: #fff;
+    }
+    button#equal {
+      background-color: #7f7fd5;
+    }
+    .btn-number {
+      background-color: #91eae4;
+      font-weight: 600;
+    }
+    .btn-operator {
+      background-color: #ff9fa6;
+    }
+  }
 }
 
 .theme-toggler {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: -90px;
+  right: 15px;
   color: #fff;
   cursor: pointer;
   z-index: 1;
   &::before {
     content: "";
+    position: absolute;
     height: 30px;
     width: 30px;
     top: 50%;
@@ -72,12 +94,13 @@ body {
     z-index: -1;
   }
 }
-.theme-toggler .active {
+.active {
   color: #333;
   &::before {
     background-color: #fff;
   }
 }
+
 button {
   height: 60px;
   width: 60px;
